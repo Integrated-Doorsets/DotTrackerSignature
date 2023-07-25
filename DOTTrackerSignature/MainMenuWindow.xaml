@@ -1,0 +1,52 @@
+﻿<Window x:Class="IdslTracker.MainMenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IdslTracker"
+        mc:Ignorable="d"
+        Title="IDSL Management Suite" Height="450" Width="800" Loaded="Window_Loaded">
+    <Window.Background>
+        <ImageBrush ImageSource="Images/bg.png"></ImageBrush>
+    </Window.Background>
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height=".1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Button Margin="20" BorderThickness="0" Click="Tracker_Button_Click" Background="DarkSeaGreen">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Image Source="Images/TrackingIcon.png" Stretch="Uniform" />
+                <TextBlock Grid.Row="1" Foreground="White" HorizontalAlignment="Center"><Run Text="DOT "/><Run Text="Tracker"/></TextBlock>
+            </Grid>
+        </Button>
+        <Button Visibility="Hidden" Margin="20" BorderThickness="0" Background="Black" Grid.Column="2" Click="ManageProforma_Button_Click">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Image Source="Images/Shane.jpg" Stretch="Fill" />
+                <StackPanel VerticalAlignment="Bottom">
+
+                    <TextBlock Padding="10,5" Margin="0,10" Background="White" Grid.Row="1" Foreground="Black" HorizontalAlignment="Center" Opacity="0.85">Manage Proformas</TextBlock>
+                </StackPanel>
+            </Grid>
+        </Button>
+
+    </Grid>
+</Window>
